@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joshua Curtin">
+    <meta name="description" content="W3_demo">
+    <title>Document</title>
+    <!--IN DOCUMENT STYLING-->
+    <style>
+        div {
+            padding: 10px;
+            margin: 15px;
+            border: 2px solid black;
+        }
+        #wrapper {
+            background-color: lightgrey;
+        }
+        .bg {
+            background-color: black;
+            color: white;
+        }
+        .border {
+            border:2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!--wrapper-->
+    <div id="wrapper">
+        <!--header-->
+        <div id="header" class="border bg">
+
+            <h1 id="title" class="fancy">My Bio Page</h1>
+            <h2 id="subtitle" class="fancy">Joshua Curtin</h2>
+        </div><!--/ #header-->
+
+        <!--navigation-->
+        <div id="nav">
+            <!--internal PAGE links: links to pages withtin the site-->
+            <a href="index.html" target="_blank">|HOME|</a>
+            <a href="school.html" target="_blank">|SCHOOLS|</a>
+            <a href="hobbies.html" target="_blank">|HOBBIES|</a>
+
+            <br><br>
+            <!--internal JUMP link: links to a section of the current page-->
+            <a href="#footer">Jump to bottom</a>
+
+            <br>
+
+            <a href="schools.html#footer">To bottom of SCHOOLS Page</a>
+
+            <br><br>
+            <!--external link: links to a page outside of our website-->
+            <a href="https://github.com/JoshuaCurtin3" target="_blank">My Projects</a>
+
+        </div><!--/ #navigation-->
+
+        <!--content-->
+        <div id="content"> 
+            <h2 class="fancy border">About me :[]</h2>
+        </div><!--/ #content-->
+
+        <!--footer-->
+        <div id="footer" class="border bg">
+            <p>&copy;Joshua Curtin | SE111 | 202420></p>
+
+            <!--edit src at end of work session-->
+            <img src="images/Capture.PNG" alt="validation" width="100%">
+        </div><!--/ #footer-->
+    </div>
+</body>
+</html>
