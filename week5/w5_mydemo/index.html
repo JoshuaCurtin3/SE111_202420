@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joshua Curtin">
+    <meta name="description" content="Week 5 Tables and Forms Demo">
+
+    <title>Week 5 Day 1</title>
+
+    <style>
+        table, td{
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Form with a Table</h1>
+    <!-- PUT TABLE INSIDE OF THE FORM-->
+    <!--work row-to-row-->
+
+    <form method="GET" action="">
+
+        <table>
+                <!--Table header-->
+                <thead>
+                    <!--Column headers - must use <b>/<#h> if you wat to bold-->
+                    <!--Table row: one row of data, populated with <td>-->
+                    <!--MUST HAVE SAME AMOUNT OF TABLE DATA-->
+                    <!--NEW ROW-->
+                    <tr>
+                        <!--LABEL-->
+                        <td>
+                            <h2>Label</h2>
+                        </td>
+                        <!--INPUT-->
+                        <td>
+                            <h2>Input</h2>
+                        </td>
+                    </tr>
+                </thead>
+                <!--Table body-->
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="fname">First Name:</label>
+                        </td>
+                        <!--INPUT-->
+                        <td>  
+                            <input type="text" name="fname" id="fname" placeholder="Enter your first name">
+                        </td>
+                    </tr>
+                    <!--NEW ROW-->
+                    <tr>
+                        <td>
+                            <label for="lname">Last Name:</label>
+                        </td>
+                        <!--INPUT-->
+                        <td>  
+                            <input type="text" name="lname" id="lname" placeholder="Enter your last name" maxlength="10" required>
+                        </td>
+                    </tr>
+                     <!--NEW ROW-->
+                     <tr>
+                        <td>
+                            <label for="age">Age:</label>
+                        </td>
+                        <!--INPUT-->
+                        <td>  
+                            <input type="number" name="age" id="age" placeholder="Age" min="0" max="100">
+                        </td>
+                    </tr>
+                    <!--NEW ROW-->
+                    <tr>
+                        <td>
+                            <label for="comments">Comments:</label>
+                        </td>
+                        <!--INPUT-->
+                        <td>  
+                            <textarea id="comments" name="comments" rows="10" cols="20" placeholder="leave comments here"></textarea>
+                        </td>
+                    </tr>
+                     <!--NEW ROW-->
+                     <tr>
+                        <td>
+                            <label for="faveColor">Pick your<br>Favorite Color:</label>
+                        </td>
+                        <!--INPUT-->
+                        <td>  
+                            <!--create drop down menu-->
+                            <select name="faveColor" id="faveColor">
+                                <!--User is restricted to one choice-->
+                                <option value="r">Red</option>
+                                <option value="o">Orange</option>
+                                <option value="p">Purple</option>
+                            </select>
+                        </td>
+                    </tr>
+                     <!--NEW ROW-->
+                     <tr>
+                        <!--radio buttons: multiple choice-->
+                        <td>
+                            <label for="study">Program of study:</label>
+                        </td>
+                        <!--INPUT-->
+                        <td>  
+                           <input type="radio" name="study" value="SE">
+                           Software Engineering<br>
+                           <input type="radio" name="study" value="CYB">
+                           Cybersecurity<br>
+                           <input type="radio" name="study" value="WD">
+                           Web Development
+                        </td>
+                    </tr>
+                    <!--NEW ROW-->
+                    <tr>
+                        <!--checkboxes: select multiple boxes-->
+                        <td>
+                            <label for="vehicles">Select your vehicle</label>
+                        </td>
+                        <!--INPUT-->
+                        <td>  
+                           <input type="checkbox" name="vehicles" value="car">CAR<br>
+                           <input type="checkbox" name="vehicles" value="roci">THE ROCINATE<br>
+                           <input type="checkbox" name="vehicles" value="motorcycle">MOTORCYCLE<br>
+
+                        </td>
+                    </tr>
+                    <!--NEW ROW-->
+                    <tr>
+                        <!--checkboxes: select multiple boxes-->
+                        <td>
+                            <label for="date">Date:</label>
+                        </td>
+                        <!--INPUT-->
+                        <td>  
+                           <input type="date" name="date" id="date">
+                        </td>
+                    </tr>
+                    <!--NEW ROW-->
+                    <tr>
+                        <!--checkboxes: select multiple boxes-->
+                        <td>
+
+                        </td>
+                        <!--INPUT-->
+                        <td>  
+                            <input type="submit" value="SUBMIT :]">
+                        </td>
+                    </tr>
+                </tbody>
+                <!--Table footer-->
+                <tfoot>
+
+                </tfoot>
+        </table>
+
+
+    </form> <!--END OF FORM-->
+    
+</body>
+</html>
