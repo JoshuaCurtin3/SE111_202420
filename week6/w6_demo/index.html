@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joshua Curtin">
+    <meta name="description" content="practice set-up">
+    <title>Week 6 Demo</title>
+</head>
+<body>
+    <!--at least one html element in page before the <script> tags-->
+    <h1>W6 | Intro to Javascript Demo</h1>
+    <!--IN DOCUMENT JAVASCRIPT-->
+    <script>
+        //writing in js
+
+        //all variables must be DECLARED before they can be defined & used
+        //we declare a variable with the keyword: var
+
+        var name //declares only, now browser understands what 'name' is when seen.
+        name = "Joshua" //defining the variable; assigning the value
+
+        var name = "Joshua" //declaration & immediate assignment
+
+        var num1 = 10
+        var num2 = 7
+
+        var sum = num1 + num2
+
+        //cannot use num1 and num2 in a process until they are both: declared and defined.
+        console.log(`Num1:${num1} | Num2:${num2} | Sum: ${sum}`)
+        //console log only used for developement/debugging
+        
+        //alert() can be seen/viewed by a user visiting the page
+        //creates a pop-up window in the browser page; user must interact with the alert() before further lines are read
+
+        alert(`Hi there, ${name}!`)
+
+        console.log(`passed the alert()`)
+
+        //INPUT-----
+        //prompt() prompting the user with a message; a pop-up with text field input element is displayed - user enters data into field, presses OK to continue.
+        var lname = prompt(`Hi again ${name}, Please enter your last name: `)
+
+        console.log(`Passed the prompt`)
+
+        console.log(`Last: ${lname}`)   //for developers
+        alert(`Last: ${lname}`)     //for users
+
+        //CAST PROMPT RETURNS TO ENSURE THEY ARE NUMBERS
+        //MUST use Number() to gain access to number properties + methods
+        var userNum = Number(prompt(`Enter a number: `))
+        //userNum = Number(userNum)
+        console.log(userNum.toFixed(2)) //displays a number to a rounded number
+
+        var tax = userNum * 0.20
+
+        alert(`Your TAXES due: \n $${tax.toFixed(2)}`)
+        console.log(`Your TAXES due: $${tax.toFixed(2)}`)
+
+    </script>
+</body>
+</html>
