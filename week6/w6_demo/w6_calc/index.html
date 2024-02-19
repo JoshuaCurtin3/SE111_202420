@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Joshua Curtin">
+    <meta name="description" content="Pay Calculator">
+    <title>W6 | Pay Calculator</title>
+</head>
+<body>
+    <h1>Week 6 Pay Calculator :]</h1>
+    <script>
+        //prompt user for hourly pay
+        var hourlyPay = Number(prompt('Please enter you hourly pay: '))
+        //assurance
+        console.log(`successfully prompted for hourly pay: $${hourlyPay.toFixed(2)}`)
+        //prompt user for hours
+        var hoursWorked = Number(prompt('Please enter the amount of hours you worked for the past two weeks: '))
+        //assurance
+        console.log(`successfully prompted for hours logged: ${hoursWorked.toFixed(2)} hours`) 
+        //gross pay
+        var gross = Number(hourlyPay * hoursWorked)
+        //Tax
+        var tax = gross * 0.20
+        //Net Pay
+        var net = gross - tax
+        //alert 
+        alert(`Your gross pay: $${gross.toFixed(2)} \nAmount of tax: $${tax.toFixed(2)} \nNet Total: $${net.toFixed(2)}`)
+        //logs
+        console.log(`Gross pay: $${gross.toFixed(2)}`)
+        console.log(`Tax: $${tax.toFixed(2)}`) 
+        console.log(`Net pay: $${net.toFixed(2)}`) 
+
+    </script>
+    
+</body>
+</html>
