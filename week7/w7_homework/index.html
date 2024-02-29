@@ -15,7 +15,7 @@
     <h1>W7 Javascript Pay Calculator Form</h1>
 
     <!--FORM- Read through to get an idea of what your IDs are!-->
-    <form style="border:1px solid blue;">
+    <form style="border:1px solid blue;" id = "myForm">
         <table>
             <tr>
                 <!--left side: questions-->
@@ -134,9 +134,9 @@
 
         console.log(enterButton)
 
-        var confirm = document.getElementById(`confirm-button`)
+        var confirmButton = document.getElementById(`confirm-button`)
 
-        console.log(confirm)
+        console.log(confirmButton)
         //PART2------adding event listeners------------------------
         /*
             add an event listener to the #enter-button that runs a function called "formData"
@@ -145,7 +145,7 @@
         */
         //enter-button
         document.querySelector(`#enter-button`).addEventListener(`click`, formData)
-        document.querySelector(`#confirmButton`).addEventListener(`click`, confirmData)
+        confirmButton.addEventListener(`click`, confirmData)
         //PART3------building event functions----------------------
         /*
             formData() instructions: 
@@ -172,17 +172,51 @@
         */
        function formData(event)
        {
+        //Giving values to input elements
+        var fname = document.getElementById(`first`).value
+        var lname = document.getElementById(`last`).value
+        var rate = document.getElementById(`rate`).value
+        var hours = document.getElementById(`hours`).value
+        
+        //full name variable
+        var fullName = fname + ` ` + lname
+        //grossPay, tax, netPay
+        var grossPay = Number(rate * hours)
+        var tax = Number(grossPay * .2)
+        var netPay = grossPay - tax
+
+
+        div.innerHTML = `<p><b>FULL NAME:</b> ${fullName}</p><p><b>Gross Pay:</b> $${grossPay.toFixed(2)}</p><p><b>TAX:</b> $${tax.toFixed(2)}</p><p><b>NETPAY:</b> $${netPay.toFixed(2)}</p>`
+
+        var form = document.getElementById("myForm")
+        function handleForm(event) { event.preventDefault() }
+        form.addEventListener('submit', handleForm)
             //EXTRA CREDIT---------+5pts-------------------------------
             /*
                 Once your file is working, add ONE INSTRUCTION above this comment, but inside of the formData(), that makes sure if the user resubmits the form without reloading the page, only the new form info is displayed
             */
-
-       }//formData()
+       
+       
+       
+       
+        }//formData()
 
 
        function confirmData(event)
        {
-
+        //Giving values to input elements
+        var fname = document.getElementById(`first`).value
+        var lname = document.getElementById(`last`).value
+        var rate = document.getElementById(`rate`).value
+        var hours = document.getElementById(`hours`).value
+        //Fullname 
+        fullName = fname + ` ` + lname
+        //gross, tax, net
+        var grossPay = Number(rate * hours)
+        var tax = Number(grossPay * .2)
+        var netPay = grossPay - tax
+        //display with alert()
+        alert(`Full Name: ${fname} \nGross Pay: $${grossPay.toFixed(2)} \nTax Amount :( : $${tax.toFixed(2)} \nNet Pay: $${netPay.toFixed(2)} \nDon't spend it all in one place!`)
        }//confirmData()
 
 
